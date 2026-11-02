@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toffyland · Dulces y botanas kosher en Tecamachalco</title>
+<meta name="description" content="Dulces, pepitas y botanas kosher traídos de Israel. Pedidos para Shabat, Knisses y eventos en Tecamachalco.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Ccircle cx=%2220%22 cy=%2216%22 r=%2213%22 fill=%22%23e8457a%22/%3E%3Crect x=%2218.6%22 y=%2228%22 width=%222.8%22 height=%2211%22 rx=%221.4%22 fill=%22%23139a9d%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rosa:#e8457a; --rosa-h:#d4336a; --rosa-c:#fde7ef;
+    --turq:#139a9d; --turq-c:#e1f5f4;
+    --sol:#ffc93c; --sol-c:#fff4d6;
+    --crema:#fff8f1; --blanco:#fff;
+    --tinta:#2b1b24; --tinta-2:#5c4652; --linea:#f0e2da;
+    --wa:#1fa855; --wa-h:#178a45;
+    --r:18px; --sombra:0 1px 2px rgba(43,27,36,.05), 0 12px 32px -14px rgba(43,27,36,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--crema);color:var(--tinta);-webkit-font-smoothing:antialiased;line-height:1.55}
+  a{color:inherit}
+  h1,h2,h3,.logo{font-family:Fredoka,Inter,sans-serif;letter-spacing:-.01em}
+  .cont{max-width:1160px;margin:0 auto;padding:0 20px}
+  svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+  .aviso-demo{background:var(--tinta);color:#f3e6ec;font-size:13px;text-align:center;padding:8px 16px}
+  .aviso-demo a{color:var(--sol);font-weight:600;text-decoration:none}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(255,248,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+  .barra{display:flex;align-items:center;gap:24px;height:70px}
+  .logo{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:700;text-decoration:none}
+  .logo .t1{color:var(--rosa)} .logo .t2{color:var(--turq)}
+  .chupa{width:36px;height:36px;flex:none}
+  nav.menu{display:flex;gap:26px;margin-left:auto;font-size:15px;font-weight:500}
+  nav.menu a{text-decoration:none;color:var(--tinta-2)} nav.menu a:hover{color:var(--rosa)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font:600 15px/1 Inter,sans-serif;text-decoration:none;border-radius:999px;padding:14px 22px;transition:.15s}
+  .btn-wa{background:var(--wa);color:#fff} .btn-wa:hover{background:var(--wa-h)}
+  .btn-rosa{background:var(--rosa);color:#fff} .btn-rosa:hover{background:var(--rosa-h)}
+  .btn-claro{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--linea)} .btn-claro:hover{box-shadow:inset 0 0 0 1.5px var(--rosa);color:var(--rosa)}
+  .barra .btn{padding:11px 18px;font-size:14px}
+
+  .hero{position:relative;overflow:hidden}
+  .hero-foto{position:absolute;inset:0;background:url(hero.jpg) center right/cover no-repeat}
+  .hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--crema) 0%,rgba(255,248,241,.94) 34%,rgba(255,248,241,.55) 56%,rgba(255,248,241,0) 78%)}
+  .hero .cont{position:relative;padding-top:86px;padding-bottom:96px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--turq)}
+  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.04;font-weight:700;max-width:620px;margin:20px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--rosa)}
+  .hero p.sub{font-size:18px;color:var(--tinta-2);max-width:520px}
+  .hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .sellos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:14px;font-weight:600;color:var(--tinta-2)}
+  .sellos span{display:inline-flex;align-items:center;gap:7px}
+  .sellos svg{color:var(--turq)}
+
+  section{padding:84px 0}
+  .titulo{max-width:640px;margin-bottom:40px}
+  .titulo .eti{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--rosa)}
+  .titulo h2{font-size:clamp(30px,3.6vw,42px);line-height:1.1;margin:10px 0 12px}
+  .titulo p{color:var(--tinta-2);font-size:17px}
+
+  .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .cat{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;transition:.18s}
+  .cat:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+  .cat .ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center}
+  .cat .ico svg{width:26px;height:26px}
+  .cat h3{font-size:21px}
+  .cat p{color:var(--tinta-2);font-size:15px;flex:1}
+  .cat a{font-weight:600;font-size:14px;color:var(--rosa);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .c1 .ico{background:var(--sol-c);color:#b07a00} .c2 .ico{background:var(--rosa-c);color:var(--rosa)} .c3 .ico{background:var(--turq-c);color:var(--turq)}
+
+  .knisses{background:var(--blanco);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+  .k-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start}
+  .lista-k{list-style:none;display:grid;gap:16px;margin-top:8px}
+  .lista-k li{display:flex;gap:14px}
+  .lista-k .n{width:34px;height:34px;flex:none;border-radius:50%;background:var(--rosa-c);color:var(--rosa);display:grid;place-items:center;font:700 15px Fredoka,sans-serif}
+  .lista-k b{display:block;font-size:16px}
+  .lista-k span{color:var(--tinta-2);font-size:15px}
+
+  .pedido{background:var(--crema);border:1px solid var(--linea);border-radius:22px;padding:26px;box-shadow:var(--sombra)}
+  .pedido h3{font-size:22px;margin-bottom:4px}
+  .pedido .nota{font-size:13px;color:var(--tinta-2);margin-bottom:18px}
+  .fila{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed var(--linea)}
+  .fila:last-of-type{border-bottom:0}
+  .fila .nom{flex:1;font-weight:500;font-size:15px}
+  .fila .nom small{display:block;color:var(--tinta-2);font-weight:400;font-size:13px}
+  .paso{display:flex;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:999px}
+  .paso button{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;font-size:18px;font-weight:600;color:var(--rosa)}
+  .paso button:focus-visible{outline:2px solid var(--rosa);border-radius:50%}
+  .paso output{min-width:30px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+  .campos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+  .campos label{font-size:13px;font-weight:600;color:var(--tinta-2);display:grid;gap:6px}
+  .campos input,.campos select{font:15px Inter,sans-serif;padding:11px 12px;border-radius:12px;border:1px solid var(--linea);background:var(--blanco);color:var(--tinta);width:100%}
+  .campos input:focus,.campos select:focus{outline:2px solid var(--rosa);border-color:transparent}
+  .resumen{font-size:14px;color:var(--tinta-2);margin-bottom:14px;min-height:21px}
+  .pedido .btn{width:100%}
+  .pedido .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+
+  .pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:p}
+  .p{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r);padding:26px}
+  .p .ico{width:46px;height:46px;border-radius:50%;background:var(--turq-c);color:var(--turq);display:grid;place-items:center;margin-bottom:14px}
+  .p h3{font-size:19px;margin-bottom:6px}
+  .p p{color:var(--tinta-2);font-size:15px}
+
+  .visita{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:stretch}
+  .tarjeta{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:18px}
+  .dato{display:flex;gap:14px}
+  .dato svg{color:var(--rosa);margin-top:2px}
+  .dato b{display:block}
+  .dato span{color:var(--tinta-2);font-size:15px}
+  .mapa{border-radius:var(--r);overflow:hidden;border:1px solid var(--linea);min-height:320px;background:var(--turq-c)}
+  .mapa iframe{width:100%;height:100%;min-height:320px;border:0;display:block}
+
+  .cta{background:linear-gradient(120deg,var(--rosa),#f06b8f 45%,var(--sol));color:#fff;border-radius:28px;padding:54px 40px;text-align:center}
+  .cta h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-bottom:10px}
+  .cta p{opacity:.95;font-size:17px;margin-bottom:26px}
+  .cta .btn{background:#fff;color:var(--rosa)} .cta .btn:hover{background:var(--tinta);color:#fff}
+
+  footer{padding:40px 0 110px;color:var(--tinta-2);font-size:14px}
+  .pie{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;border-top:1px solid var(--linea);padding-top:26px}
+  .pie .logo{font-size:21px}
+  .pie a{text-decoration:none;font-weight:600;color:var(--rosa)}
+
+  .flota{position:fixed;right:20px;bottom:20px;z-index:30;box-shadow:0 10px 26px -8px rgba(31,168,85,.6)}
+
+  @media (max-width:920px){
+    nav.menu{display:none}
+    .barra .btn{margin-left:auto}
+    .cats,.pasos{grid-template-columns:1fr 1fr}
+    .k-grid,.visita{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    .cont{padding:0 16px}
+    .barra{height:62px;gap:12px}
+    .logo{font-size:22px} .chupa{width:30px;height:30px}
+    .barra .btn span{display:none}
+    .hero-foto{background-position:68% center}
+    .hero-foto::after{background:linear-gradient(180deg,rgba(255,248,241,.93) 0%,rgba(255,248,241,.88) 60%,rgba(255,248,241,.7) 100%)}
+    .hero .cont{padding-top:56px;padding-bottom:64px}
+    .hero p.sub{font-size:16px}
+    .hero .acciones .btn{flex:1 1 100%}
+    section{padding:60px 0}
+    .cats,.pasos{grid-template-columns:1fr}
+    .campos{grid-template-columns:1fr}
+    .pedido{padding:20px}
+    .cta{padding:40px 22px;border-radius:22px}
+    .flota span{display:none}
+    .flota{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-semilla" viewBox="0 0 24 24"><path d="M12 22c4-3 6-7 6-11a6 6 0 0 0-12 0c0 4 2 8 6 11Z"/><path d="M12 8v8"/></symbol>
+  <symbol id="i-bolsa" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-dulce" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M7.5 9.5 3 7l1 5-1 5 4.5-2.5M16.5 9.5 21 7l-1 5 1 5-4.5-2.5"/></symbol>
+  <symbol id="i-choco" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 9h16M4 15h16M12 3v18"/></symbol>
+  <symbol id="i-regalo" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-charola" viewBox="0 0 24 24"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8V6M10 6h4"/></symbol>
+  <symbol id="i-lista" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-msj" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></symbol>
+  <symbol id="i-camion" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+</svg>
+
+<div class="aviso-demo">Demostración preparada para Toffyland por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a>. Los productos son de ejemplo.</div>
+
+<header>
+  <div class="cont barra">
+    <a class="logo" href="#inicio" aria-label="Toffyland, inicio">
+      <svg class="chupa" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="16" r="13" fill="#e8457a"/><path d="M20 16m-9 0a9 9 0 1 0 18 0a6 6 0 1 0-12 0a3 3 0 1 0 6 0" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><rect x="18.6" y="28" width="2.8" height="11" rx="1.4" fill="#139a9d"/></svg>
+      <span><span class="t1">Toffy</span><span class="t2">land</span></span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#productos">Productos</a>
+      <a href="#knisses">Knisses y eventos</a>
+      <a href="#como">Cómo pedir</a>
+      <a href="#visita">Visítanos</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/525640401717?text=Hola%20Toffyland%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span>Pedir por WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="hero-foto" role="img" aria-label="Mostrador con frascos de dulces, pistaches, pepitas y botanas"></div>
+    <div class="cont">
+      <span class="chip"><svg class="i" style="width:16px;height:16px"><use href="#i-check"/></svg> Kosher · Traído de Israel</span>
+      <h1>Dulces y botanas <em>kosher</em> para cada ocasión</h1>
+      <p class="sub">Pepitas, botanas, chocolates y dulces de excelente calidad en Tecamachalco. Para Shabat, shiurim, eventos o para tener en casa toda la semana.</p>
+      <div class="acciones">
+        <a class="btn btn-rosa" href="#productos">Ver productos <svg class="i"><use href="#i-flecha"/></svg></a>
+        <a class="btn btn-claro" href="#knisses">Pedido para mi Kniss</a>
+      </div>
+      <div class="sellos">
+        <span><svg class="i"><use href="#i-check"/></svg> Productos de Israel</span>
+        <span><svg class="i"><use href="#i-check"/></svg> Precios por cantidad</span>
+        <span><svg class="i"><use href="#i-check"/></svg> Pedidos por WhatsApp</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="productos">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Productos</div>
+        <h2>Lo que vas a encontrar en Toffyland</h2>
+        <p>Una selección diferente, con productos que llegan de Israel y que no encuentras en cualquier lado.</p>
+      </div>
+      <div class="cats">
+        <article class="cat c1">
+          <div class="ico"><svg class="i"><use href="#i-semilla"/></svg></div>
+          <h3>Pepitas y semillas</h3>
+          <p>Pepitas de girasol y de calabaza, tostadas y con sal, como las de Israel.</p>
+          <a href="#" data-pedir="Pepitas y semillas">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c2">
+          <div class="ico"><svg class="i"><use href="#i-bolsa"/></svg></div>
+          <h3>Botanas de Israel</h3>
+          <p>Las botanas favoritas de la mesa de Shabat, en bolsa individual y familiar.</p>
+          <a href="#" data-pedir="Botanas de Israel">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c3">
+          <div class="ico"><svg class="i"><use href="#i-choco"/></svg></div>
+          <h3>Chocolates</h3>
+          <p>Tabletas, bombones y chocolates surtidos para regalar o para el kiddush.</p>
+          <a href="#" data-pedir="Chocolates">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c2">
+          <div class="ico"><svg class="i"><use href="#i-dulce"/></svg></div>
+          <h3>Dulces y gomitas</h3>
+          <p>Gomitas, caramelos y dulces de colores a granel, para niños y grandes.</p>
+          <a href="#" data-pedir="Dulces y gomitas">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c3">
+          <div class="ico"><svg class="i"><use href="#i-semilla"/></svg></div>
+          <h3>Frutos secos</h3>
+          <p>Pistaches, nueces, almendras y mezclas para picar en la semana.</p>
+          <a href="#" data-pedir="Frutos secos">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+        <article class="cat c1">
+          <div class="ico"><svg class="i"><use href="#i-regalo"/></svg></div>
+          <h3>Charolas y regalos</h3>
+          <p>Charolas armadas para eventos, kiddush y regalos, a tu medida.</p>
+          <a href="#" data-pedir="Charolas y regalos">Preguntar por WhatsApp <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="knisses" class="knisses">
+    <div class="cont k-grid">
+      <div>
+        <div class="titulo">
+          <div class="eti">Knisses y eventos</div>
+          <h2>Precios especiales para Knisses y pedidos grandes</h2>
+          <p>Surte tu Kniss para Shabat, shiurim o eventos sin vueltas: arma tu pedido aquí y te lo confirmamos por WhatsApp.</p>
+        </div>
+        <ul class="lista-k">
+          <li><div class="n">1</div><div><b>Elige productos y cantidades</b><span>Aquí mismo en la página, en un minuto.</span></div></li>
+          <li><div class="n">2</div><div><b>Envíalo por WhatsApp</b><span>Te llega a nosotros ya escrito, sin errores.</span></div></li>
+          <li><div class="n">3</div><div><b>Te confirmamos precio y entrega</b><span>Con precio especial por cantidad.</span></div></li>
+        </ul>
+      </div>
+
+      <form class="pedido" id="pedido" onsubmit="return false">
+        <h3>Arma tu pedido</h3>
+        <p class="nota">Productos de ejemplo. Con su catálogo real ponemos sus productos, fotos y precios.</p>
+        <div id="filas"></div>
+        <div class="campos">
+          <label>Nombre o Kniss<input id="quien" autocomplete="organization" placeholder="Ej. Kniss de la calle Fuentes"></label>
+          <label>Para cuándo<select id="cuando"><option value="para este Shabat">Este Shabat</option><option value="para entre semana">Entre semana</option><option value="para un evento">Para un evento</option></select></label>
+        </div>
+        <p class="resumen" id="resumen" aria-live="polite">Agrega al menos un producto.</p>
+        <a class="btn btn-wa" id="enviar" href="#" target="_blank" rel="noopener" aria-disabled="true"><svg class="i"><use href="#i-wa"/></svg> Enviar pedido por WhatsApp</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="como">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Cómo pedir</div>
+        <h2>Pedir es muy fácil</h2>
+      </div>
+      <div class="pasos">
+        <div class="p"><div class="ico"><svg class="i"><use href="#i-lista"/></svg></div><h3>Elige</h3><p>Revisa los productos o pídenos el catálogo completo.</p></div>
+        <div class="p"><div class="ico"><svg class="i"><use href="#i-msj"/></svg></div><h3>Escríbenos</h3><p>Mándanos tu pedido por WhatsApp al 56 4040 1717.</p></div>
+        <div class="p"><div class="ico"><svg class="i"><use href="#i-camion"/></svg></div><h3>Recoge o recibe</h3><p>Pasa a la tienda en Tecamachalco o pregunta por entrega.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visita" style="padding-top:0">
+    <div class="cont visita">
+      <div class="tarjeta">
+        <div class="titulo" style="margin:0">
+          <div class="eti">Visítanos</div>
+          <h2>Te esperamos en Tecamachalco</h2>
+        </div>
+        <div class="dato"><svg class="i"><use href="#i-pin"/></svg><div><b>Av. de las Fuentes 2</b><span>Lomas de Tecamachalco, Naucalpan</span></div></div>
+        <div class="dato"><svg class="i"><use href="#i-tel"/></svg><div><b>56 4040 1717</b><span>Pedidos y dudas por WhatsApp</span></div></div>
+        <div class="dato"><svg class="i"><use href="#i-reloj"/></svg><div><b>Horario</b><span>Pregúntanos por WhatsApp el horario de esta semana.</span></div></div>
+        <a class="btn btn-claro" href="https://www.google.com/maps/search/?api=1&query=Toffyland%20Av.%20de%20las%20Fuentes%202%20Tecamachalco" target="_blank" rel="noopener"><svg class="i"><use href="#i-pin"/></svg> Cómo llegar</a>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa de Toffyland en Tecamachalco" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Av.+de+las+Fuentes+2,+Lomas+de+Tecamachalco,+Naucalpan&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="cont">
+      <div class="cta">
+        <h2>Lo mejor de Israel, cerca de tu casa</h2>
+        <p>Escríbenos y te mandamos el catálogo completo.</p>
+        <a class="btn" href="https://wa.me/525640401717?text=Hola%20Toffyland%2C%20me%20mandan%20el%20cat%C3%A1logo%3F" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg> Pedir el catálogo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cont pie">
+    <span class="logo"><span class="t1">Toffy</span><span class="t2">land</span></span>
+    <span>Dulcería kosher · Av. de las Fuentes 2, Tecamachalco</span>
+    <span>Demo por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a></span>
+  </div>
+</footer>
+
+<a class="btn btn-wa flota" href="https://wa.me/525640401717?text=Hola%20Toffyland" target="_blank" rel="noopener" aria-label="Escribir a Toffyland por WhatsApp"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+  const WA = '525640401717';
+  const liga = (t) => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+
+  document.querySelectorAll('[data-pedir]').forEach((a) => {
+    a.href = liga(`Hola Toffyland, me interesa: ${a.dataset.pedir}. ¿Qué tienen disponible?`);
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  const productos = [
+    ['Pepitas de girasol', 'Bolsa de 200 g'],
+    ['Pepitas de calabaza', 'Bolsa de 200 g'],
+    ['Pistaches tostados', 'Bolsa de 250 g'],
+    ['Mix de botanas de Israel', 'Paquete surtido'],
+    ['Chocolates surtidos', 'Caja de 12'],
+    ['Gomitas a granel', 'Bolsa de 500 g'],
+  ];
+  const cant = productos.map(() => 0);
+  const filas = document.getElementById('filas');
+  filas.innerHTML = productos.map(([n, d], i) => `
+    <div class="fila">
+      <div class="nom">${n}<small>${d}</small></div>
+      <div class="paso" role="group" aria-label="Cantidad de ${n}">
+        <button type="button" data-i="${i}" data-d="-1" aria-label="Quitar uno">−</button>
+        <output id="c${i}">0</output>
+        <button type="button" data-i="${i}" data-d="1" aria-label="Agregar uno">+</button>
+      </div>
+    </div>`).join('');
+
+  const enviar = document.getElementById('enviar');
+  const resumen = document.getElementById('resumen');
+  const quien = document.getElementById('quien');
+  const cuando = document.getElementById('cuando');
+
+  function pintar() {
+    const total = cant.reduce((a, b) => a + b, 0);
+    const tipos = cant.filter((c) => c > 0).length;
+    resumen.textContent = total
+      ? `${total} ${total === 1 ? 'pieza' : 'piezas'} de ${tipos} ${tipos === 1 ? 'producto' : 'productos'}`
+      : 'Agrega al menos un producto.';
+    const lineas = productos.map(([n], i) => cant[i] ? `• ${cant[i]} × ${n}` : '').filter(Boolean);
+    const texto = `Hola Toffyland, quiero hacer un pedido${quien.value.trim() ? ' para ' + quien.value.trim() : ''} ${cuando.value}:\n${lineas.join('\n')}\n¿Me confirman precio y entrega?`;
+    enviar.href = liga(texto);
+    enviar.setAttribute('aria-disabled', total ? 'false' : 'true');
+  }
+
+  filas.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-i]');
+    if (!b) return;
+    const i = +b.dataset.i;
+    cant[i] = Math.max(0, Math.min(99, cant[i] + +b.dataset.d));
+    document.getElementById('c' + i).textContent = cant[i];
+    pintar();
+  });
+  quien.addEventListener('input', pintar);
+  cuando.addEventListener('change', pintar);
+  pintar();
+</script>
+</body>
+</html>
